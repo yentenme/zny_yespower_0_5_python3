@@ -1,7 +1,8 @@
 from distutils.core import setup, Extension
 
 bell_yespower_module = Extension('bell_yespower',
-                            sources = ['yespower.c'],
+                            sources = ['yespower.c',
+                                       'yespower-opt.c'],
                             extra_compile_args=['-march=native', '-funroll-loops', '-fomit-frame-pointer'],
                             include_dirs=['.'])
 
