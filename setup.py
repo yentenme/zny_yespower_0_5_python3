@@ -4,7 +4,6 @@ bell_yespower_module = Extension('bell_yespower',
                             sources = ['yespower-module.c',
                                        'yespower.c',
                                        'yespower-opt.c',
-                                       'yespower-ref.c',
                                        'sha256.c'
                                        ],
                             extra_compile_args=['-march=native', '-funroll-loops', '-fomit-frame-pointer'],
