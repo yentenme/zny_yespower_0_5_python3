@@ -1,15 +1,11 @@
 コンパイル方法
 
-wget https://github.com/wakiyamap/zny_yescrypt_python/archive/master.zip
+git clone https://github.com/bellcoin-electrum/bell_yespower_python3
 
-unzip zny_yescrypt_python-master.zip
+cd bell_yespower_python3
 
-cd zny_yescrypt_python-master
-
-setup.py build --compile=mingw32 install
-
-
+sudo python3 setup.py install
 
 使用方法
 
-import zny_yescrypt
+import bell_yespower

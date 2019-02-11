@@ -2,6 +2,7 @@ from distutils.core import setup, Extension
 
 bell_yespower_module = Extension('bell_yespower',
                             sources = ['yespower-module.c',
+                                       'yespower.c',
                                        'yespower-opt.c',
                                        'yespower-platform.c',
                                        'yespower-ref.c',
