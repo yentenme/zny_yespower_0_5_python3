@@ -100,7 +100,7 @@
 
 #include "yespower.h"
 
-#include "yespower-platform_c.h"
+#include "yespower-platform.c"
 
 #if __STDC_VERSION__ >= 199901L
 /* Have restrict */
@@ -1012,7 +1012,7 @@ static void smix(uint8_t *B, size_t r, uint32_t N,
 #define smix1 smix1_1_0
 #define smix2 smix2_1_0
 #define smix smix_1_0
-#include "yespower-opt_c.h"
+#include "yespower-opt.c"
 #undef smix
 
 /**
@@ -1145,3 +1145,12 @@ int yespower_free_local(yespower_local_t *local)
 	return free_region(local);
 }
 #endif
+
+/* 
+ * yespower for bellcoin
+ */
+int yespower_hash(const char *input, char *output)
+{
+	yespower_params_t params = {YESPOWER_1_0, 2048, 32, NULL, 0};
+	return yespower_tls(input, 80, &params, (yespower_binary_t *) output);
+}
