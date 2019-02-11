@@ -20,6 +20,7 @@
 
 #ifdef __unix__
 #include <sys/mman.h>
+#include "yespower.h"
 #endif
 
 #define HUGEPAGE_THRESHOLD		(12 * 1024 * 1024)
