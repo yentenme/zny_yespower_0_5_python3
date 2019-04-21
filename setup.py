@@ -1,6 +1,6 @@
 from distutils.core import setup, Extension
 
-bell_yespower_module = Extension('bell_yespower',
+zny_yespower_0_5_module = Extension('zny_yespower_0_5',
                             sources = ['yespower-module.c',
                                        'yespower.c',
                                        'yespower-opt.c',
@@ -9,10 +9,10 @@ bell_yespower_module = Extension('bell_yespower',
                             extra_compile_args=['-march=native', '-funroll-loops', '-fomit-frame-pointer'],
                             include_dirs=['.'])
 
-setup (name = 'bell_yespower',
-       version = '1.0.2',
+setup (name = 'zny_yespower_0_5',
+       version = '1.0.0',
        author_email = 'yuto_tetuota@yahoo.co.jp',
-       author = 'yutotetota',
-       url = 'https://github.com/bellcoin-electrum/bell_yespower_python3',
-       description = 'Bindings for yespower-1.0 proof of work used by bellcoin',
-       ext_modules = [bell_yespower_module])
+       author = 'y-chan',
+       url = 'https://github.com/bitzeny-electrum/zny_yespower_0_5_python3',
+       description = 'Bindings for yespower-0.5 proof of work used by bitzeny',
+       ext_modules = [zny_yespower_0_5_module])
