@@ -1,4 +1,4 @@
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 
 zny_yespower_0_5_module = Extension('zny_yespower_0_5',
                             sources = ['yespower-module.c',
