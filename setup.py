@@ -6,7 +6,7 @@ zny_yespower_0_5_module = Extension('zny_yespower_0_5',
                                        'yespower-opt.c',
                                        'sha256.c'
                                        ],
-                            extra_compile_args=['-march=native', '-funroll-loops', '-fomit-frame-pointer'],
+                            extra_compile_args=['-O2', '-funroll-loops', '-fomit-frame-pointer'],
                             include_dirs=['.'])
 
 setup (name = 'zny_yespower_0_5',
