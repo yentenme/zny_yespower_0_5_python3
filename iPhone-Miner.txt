@@ -1,0 +1,30 @@
+How to mine Yenten in 32 bits on an iPhone.
+
+Install iSH (through testlight): https://ish.app
+
+apk add git #if you want to grab code from github
+apk add openssh # alternative I use at home to copy the code using scp in dev mode
+apk add python python-dev py-setuptools
+apk add gcc
+apk add musl-dev
+
+
+
+git clone ... or copy code
+cd <dir>
+python setup.py build
+
+you can do python setup.py install if you want to avoid the following step:
+
+#ignore the warnings. The code contains optimizations which will be ignore through the build...
+
+cp build/lib*/*.so .
+
+#edit ni.sh to put your pool and address details (or leave mine if you really prefer)
+
+
+./ni.sh
+
+
+
+
